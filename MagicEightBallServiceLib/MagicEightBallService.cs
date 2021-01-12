@@ -20,7 +20,7 @@ namespace MagicEightBallServiceLib
             "Hazy", "Ask again later", "Definitely" };
 
             var randomizer = new Random();
-            return answers[randomizer.Next(answers.Length)]];
+            return answers[randomizer.Next(answers.Length)];
         }
     }
 }
