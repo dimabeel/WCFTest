@@ -12,12 +12,23 @@ namespace MagicEightBallServiceClient
         static void Main(string[] args)
         {
             Console.WriteLine("*** Ask the Magic 8 Ball ****\n");
-            using (EightBallClient ball = new EightBallClient())
+            using (EightBallClient ball = new EightBallClient("NetTcpBinding_IEightBall"))
             {
-                Console.WriteLine("Your question:");
-                string question = Console.ReadLine();
-                string answer = ball.ObtainAnswerToQuestion(question);
-                Console.WriteLine($"8-Ball says: {answer}");
+                bool isExit = false;
+                while(isExit == false)
+                {
+                    Console.WriteLine("Your question:");
+                    string question = Console.ReadLine();
+                    if(question == "Exit")
+                    {
+                        isExit = true;
+                    }
+                    else
+                    {
+                        string answer = ball.ObtainAnswerToQuestion(question);
+                        Console.WriteLine($"8-Ball says: {answer}");
+                    }
+                }
             }
 
             Console.ReadLine();
