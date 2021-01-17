@@ -5,9 +5,9 @@ using System;
 
 namespace MathWindowsServiceHost
 {
-    public partial class MathService : ServiceBase
+    public partial class MathWinService : ServiceBase
     {
-        public MathService()
+        public MathWinService()
         {
             InitializeComponent();
         }
@@ -16,7 +16,7 @@ namespace MathWindowsServiceHost
         {
             myHost?.Close();
 
-            //myHost = new ServiceHost(typeof(MathService));
+            //myHost = new ServiceHost(typeof(MathWinService));
             //var address = new Uri("http://localhost:8080/MathServiceLibrary");
             //var binding = new WSHttpBinding();
             //var contract = typeof(IBasicMath);
