@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-namespace EmployeeService
+namespace CarService
 {
     [ServiceContract]
     public interface ICarService
@@ -13,6 +13,7 @@ namespace EmployeeService
         [OperationContract]
         Car GetCar(int id);
 
+        [OperationContract]
         void SaveCar(Car car);
     }
 }

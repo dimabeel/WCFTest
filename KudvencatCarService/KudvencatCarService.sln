@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService", "EmployeeService\CarService.csproj", "{C88E4C85-2879-4EFD-B50A-AD9A078C1979}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarService", "CarService\CarService.csproj", "{C88E4C85-2879-4EFD-B50A-AD9A078C1979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarServiceHost", "CarServiceHost\CarServiceHost.csproj", "{BAF04318-BD42-45A0-9CE4-49CD8AFF83E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C88E4C85-2879-4EFD-B50A-AD9A078C1979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C88E4C85-2879-4EFD-B50A-AD9A078C1979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C88E4C85-2879-4EFD-B50A-AD9A078C1979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF04318-BD42-45A0-9CE4-49CD8AFF83E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF04318-BD42-45A0-9CE4-49CD8AFF83E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF04318-BD42-45A0-9CE4-49CD8AFF83E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF04318-BD42-45A0-9CE4-49CD8AFF83E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

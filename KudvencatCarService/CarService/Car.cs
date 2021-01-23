@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
 
-namespace EmployeeService
+namespace CarService
 {
     [DataContract]
     public class Car

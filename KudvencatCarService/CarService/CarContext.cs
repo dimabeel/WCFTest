@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace EmployeeService
+namespace CarService
 {
     class CarContext : DbContext
     {
