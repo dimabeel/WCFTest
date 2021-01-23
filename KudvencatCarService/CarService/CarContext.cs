@@ -10,6 +10,6 @@ namespace CarService
                 .SetInitializer(new CreateDatabaseIfNotExists<CarContext>());
         }
 
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<Car> Car { get; set; }
     }
 }

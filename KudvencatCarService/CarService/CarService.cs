@@ -40,9 +40,8 @@ namespace CarService
                     .SqlParameter("@YearOfProduction", car.YearOfProduction);
                 parameters.Add(YearOfProductionParam);
 
-                var foundCar = cars.Database
-                    .SqlQuery<Car>(
-                    "SaveCar @Id @Mark @Model @YearOfProduction", parameters);
+                cars.Database.ExecuteSqlCommand(
+                    "SaveCar @Id, @Mark, @Model, @YearOfProduction", parameters.ToArray());
             }
         }
     }

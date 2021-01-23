@@ -22,9 +22,9 @@ namespace CarClient
 
             if(car != null)
             {
-                MarkLabel.Text = car.Mark;
-                ModelLabel.Text = car.Model;
-                YearLabel.Text = car.YearOfProduction.Year.ToString();
+                MarkTxtBx.Text = car.Mark;
+                ModelTxtBx.Text = car.Model;
+                YearTxtBx.Text = car.YearOfProduction.Year.ToString();
                 ResultLabel.Text = "Sucessfull get car";
             }
             else

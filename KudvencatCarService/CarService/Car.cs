@@ -7,7 +7,6 @@ namespace CarService
     [DataContract]
     public class Car
     {
-        [Key]
         [DataMember(Order = 1)]
         public int Id { get; set; }
 
