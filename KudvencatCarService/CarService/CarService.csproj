@@ -53,15 +53,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202101241705354_AddElectricAndOilFuelCars.cs" />
+    <Compile Include="Migrations\202101241705354_AddElectricAndOilFuelCars.designer.cs">
+      <DependentUpon>202101241705354_AddElectricAndOilFuelCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101241831289_rename table.cs" />
+    <Compile Include="Migrations\202101241831289_rename table.designer.cs">
+      <DependentUpon>202101241831289_rename table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101241921162_add timestamp.cs" />
+    <Compile Include="Migrations\202101241921162_add timestamp.designer.cs">
+      <DependentUpon>202101241921162_add timestamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OilFuelCar.cs" />
+    <Compile Include="ElectricCar.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="CarContext.cs" />
     <Compile Include="CarService.cs" />
     <Compile Include="ICarService.cs" />
+    <Compile Include="Migrations\202101232109385_InitialCreate.cs" />
+    <Compile Include="Migrations\202101232109385_InitialCreate.designer.cs">
+      <DependentUpon>202101232109385_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101232109385_InitialCreate.resx">
+      <DependentUpon>202101232109385_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101241705354_AddElectricAndOilFuelCars.resx">
+      <DependentUpon>202101241705354_AddElectricAndOilFuelCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101241831289_rename table.resx">
+      <DependentUpon>202101241831289_rename table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101241921162_add timestamp.resx">
+      <DependentUpon>202101241921162_add timestamp.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

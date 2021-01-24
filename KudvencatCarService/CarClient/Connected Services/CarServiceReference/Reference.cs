@@ -17,6 +17,8 @@ namespace CarClient.CarServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Car", Namespace="http://schemas.datacontract.org/2004/07/CarService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(CarClient.CarServiceReference.ElectricCar))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(CarClient.CarServiceReference.OilFuelCar))]
     public partial class Car : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -33,6 +35,9 @@ namespace CarClient.CarServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime YearOfProductionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CarClient.CarServiceReference.EngineType EngineTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -96,6 +101,19 @@ namespace CarClient.CarServiceReference {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public CarClient.CarServiceReference.EngineType EngineType {
+            get {
+                return this.EngineTypeField;
+            }
+            set {
+                if ((this.EngineTypeField.Equals(value) != true)) {
+                    this.EngineTypeField = value;
+                    this.RaisePropertyChanged("EngineType");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -104,6 +122,79 @@ namespace CarClient.CarServiceReference {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ElectricCar", Namespace="http://schemas.datacontract.org/2004/07/CarService")]
+    [System.SerializableAttribute()]
+    public partial class ElectricCar : CarClient.CarServiceReference.Car {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RangeInKilometersField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RangeInKilometers {
+            get {
+                return this.RangeInKilometersField;
+            }
+            set {
+                if ((this.RangeInKilometersField.Equals(value) != true)) {
+                    this.RangeInKilometersField = value;
+                    this.RaisePropertyChanged("RangeInKilometers");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OilFuelCar", Namespace="http://schemas.datacontract.org/2004/07/CarService")]
+    [System.SerializableAttribute()]
+    public partial class OilFuelCar : CarClient.CarServiceReference.Car {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EnginePowerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EngineССField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EnginePower {
+            get {
+                return this.EnginePowerField;
+            }
+            set {
+                if ((this.EnginePowerField.Equals(value) != true)) {
+                    this.EnginePowerField = value;
+                    this.RaisePropertyChanged("EnginePower");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EngineСС {
+            get {
+                return this.EngineССField;
+            }
+            set {
+                if ((this.EngineССField.Equals(value) != true)) {
+                    this.EngineССField = value;
+                    this.RaisePropertyChanged("EngineСС");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EngineType", Namespace="http://schemas.datacontract.org/2004/07/CarService")]
+    public enum EngineType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Electric = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        OilFuel = 2,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
